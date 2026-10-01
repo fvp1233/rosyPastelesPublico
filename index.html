@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rosy Pasteles - El sabor de lo especial</title>
+  <link rel="icon" type="image/png" href="img/logo.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- Pantalla de Bienvenida (Splash) -->
+  <div id="intro-splash" class="intro-splash" aria-hidden="true">
+    <div class="intro-splash-glow"></div>
+    <img src="img/logo.png" alt="Rosy Pasteles" class="intro-logo">
+  </div>
+
+  <!-- Encabezado y Navegación Principal -->
+  <header class="main-header">
+    <div class="container header-container">
+
+      <a href="#inicio" class="logo-link">
+        <img src="img/logo.png" alt="Logo Rosy Pasteles" class="site-logo">
+      </a>
+
+      <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Abrir Menú">
+        ☰
+      </button>
+
+      <nav class="nav-menu" id="nav-menu">
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#reposteria">Repostería</a></li>
+          <li><a href="#pasteleria">Pastelería</a></li>
+          <li><a href="#eventos">Eventos</a></li>
+          <li><a href="#nosotros">Nosotros</a></li>
+          <li>
+            <a href="https://wa.me/50376111636" class="btn-order-nav" target="_blank">
+              Ordenar Ahora
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- Sección de Inicio / Carrusel -->
+  <section id="inicio" class="hero-carousel">
+    <div class="carousel-track">
+      <!-- Slide 1: reemplazar src por la imagen real -->
+      <div class="carousel-slide active">
+        <img src="img/carrusel-1.jpg" alt="Foto 1 Rosy Pasteles">
+      </div>
+      <!-- Slide 2: reemplazar src por la imagen real -->
+      <div class="carousel-slide">
+        <img src="img/carrusel-2.jpg" alt="Foto 2 Rosy Pasteles">
+      </div>
+      <!-- Slide 3: reemplazar src por la imagen real -->
+      <div class="carousel-slide">
+        <img src="img/carrusel-3.jpg" alt="Foto 3 Rosy Pasteles">
+      </div>
+    </div>
+
+    <!-- Puntos indicadores del carrusel -->
+    <div class="carousel-dots">
+      <button class="carousel-dot active" data-slide="0" aria-label="Ir a la foto 1"></button>
+      <button class="carousel-dot" data-slide="1" aria-label="Ir a la foto 2"></button>
+      <button class="carousel-dot" data-slide="2" aria-label="Ir a la foto 3"></button>
+    </div>
+  </section>
+
+  <!-- Sección Repostería -->
+  <section id="reposteria" class="products-section container">
+
+    <div class="section-title-wrap">
+      <h2>Nuestra Repostería</h2>
+      <p style="color: #ffffff;">
+        Disfruta de nuestras deliciosas porciones y postres individuales hechos con amor.
+      </p>
+    </div>
+
+    <!-- Filtros de Categorías -->
+    <div class="filter-bar">
+      <button class="filter-btn active" data-category="todos">Todos</button>
+      <button class="filter-btn" data-category="vasos">Postres en Vaso</button>
+      <button class="filter-btn" data-category="porciones">Porciones y Tartas</button>
+    </div>
+
+    <!-- Cuadrícula de Productos -->
+    <div class="products-grid" id="products-grid">
+
+      <!-- Producto 1 -->
+      <div class="product-card" data-category="porciones">
+        <div class="product-img-holder">
+          <img src="img/maria-luisa.png" alt="María Luisa con poleada">
+          <span class="price-tag">$1.25</span>
+        </div>
+
+        <div class="product-info">
+          <h3>María Luisa con poleada</h3>
+          <p class="portion-text">Porción individual</p>
+          <a href="https://wa.me/50376111636?text=Hola,%20deseo%20ordenar%20María%20Luisa%20con%20poleada" class="btn-card" target="_blank">
+            Ordenar
+          </a>
+          <div class="product-hover-description" aria-hidden="true"><strong>María Luisa con poleada</strong><span>Deliciosa porción de María Luisa, suave y esponjosa, acompañada de una cremosa poleada.</span></div>
+        </div>
+      </div>
+
+      <!-- Producto 2 -->
+      <div class="product-card" data-category="porciones">
+        <div class="product-img-holder">
+          <img src="img/mousse-oreo.png" alt="Mousse de oreo">
+          <span class="price-tag">$2.25</span>
+        </div>
+
+        <div class="product-info">
+          <h3>Mousse de oreo</h3>
+          <p class="portion-text">Porción individual</p>
+          <a href="https://wa.me/50376111636?text=Hola,%20deseo%20ordenar%20Mousse%20de%20oreo" class="btn-card" target="_blank">
+            Ordenar
+          </a>
+          <div class="product-hover-description" aria-hidden="true"><strong>Mousse de oreo</strong><span>Mousse suave y cremoso con el delicioso sabor de las galletas Oreo.</span></div>
+        </div>
+      </div>
+
+      <!-- Producto 3 -->
+      <div class="product-card" data-category="porciones">
+        <div class="product-img-holder">
+          <img src="img/budin-coco.png" alt="Budín de coco">
+          <span class="price-tag">$1.25</span>
+        </div>
+
+        <div class="product-info">
+          <h3>Budín de coco</h3>
+          <p class="portion-text">Porción individual</p>
+          <a href="https://wa.me/50376111636?text=Hola,%20deseo%20ordenar%20Budín%20de%20coco" class="btn-card" target="_blank">
+            Ordenar
+          </a>
+          <div class="product-hover-description" aria-hidden="true"><strong>Budín de coco</strong><span>Budín casero de textura suave con un agradable y delicado sabor a coco.</span></div>
+        </div>
+      </div>
+
+      <!-- Producto 4 -->
+      <div class="product-card" data-category="porciones">
+        <div class="product-img-holder">
+          <img src="img/budin.png" alt="Budín">
+          <span class="price-tag">$1.00</span>
+        </div>
+
+        <div class="product-info">
+          <h3>Budín</h3>
+          <p class="portion-text">Porción individual</p>
+          <a href="https://wa.me/50376111636?text=Hola,%20deseo%20ordenar%20Budín" class="btn-card" target="_blank">
+            Ordenar
+          </a>
+          <div class="product-hover-description" aria-hidden="true"><strong>Budín</strong><span>Clásico budín casero, suave, esponjoso y perfecto para disfrutar a cualquier hora.</span></div>
+        </div>
+      </div>
+
+      <!-- Producto 5 -->
+      <div class="product-card" data-category="porciones">
+        <div class="product-img-holder">
+          <img src="img/flan-caramelo.png" alt="Flan de caramelo">
+          <span class="price-tag">$2.50</span>
+        </div>
+
+        <div class="product-info">
+          <h3>Flan de caramelo</h3>
+          <p class="portion-text">Porción individual</p>
+          <a href="https://wa.me/50376111636?text=Hola,%20deseo%20ordenar%20Flan%20de%20caramelo" class="btn-card" target="_blank">
+            Ordenar
+          </a>
+          <div class="product-hover-description" aria-hidden="true"><strong>Flan de caramelo</strong><span>Flan cremoso y suave, acompañado de una deliciosa capa de caramelo.</span></div>
+        </div>
+      </div>
+
+      <!-- Producto 6 -->
+      <div class="product-card" data-category="porciones">
+        <div class="product-img-holder">
+          <img src="img/chocoflan.png" alt="Chocoflan">
+          <span class="price-tag">$2.25</span>
+        </div>
+
+        <div class="product-info">
+          <h3>Chocoflan</h3>
+          <p class="portion-text">Porción individual</p>
+          <a href="https://wa.me/50376111636?text=Hola,%20deseo%20ordenar%20Chocoflan" class="btn-card" target="_blank">
+            Ordenar
+          </a>
+          <div class="product-hover-description" aria-hidden="true"><strong>Chocoflan</strong><span>La combinación perfecta de pastel de chocolate y flan cremoso en un solo postre.</span></div>
+        </div>
+      </div>
+
+      <!-- Producto 7 -->
+      <div class="product-card" data-category="porciones">
+        <div class="product-img-holder">
+          <img src="img/cheesecake-fresa.png" alt="Cheesecake de fresa">
+          <span class="price-tag">$2.25</span>
+        </div>
+
+        <div class="product-info">
+          <h3>Cheesecake de fresa</h3>
+          <p class="portion-text">Porción individual</p>
+          <a href="https://wa.me/50376111636?text=Hola,%20deseo%20ordenar%20Cheesecake%20de%20fresa" class="btn-card" target="_blank">
+            Ordenar
+          </a>
+          <div class="product-hover-description" aria-hidden="true"><strong>Cheesecake de fresa</strong><span>Cheesecake cremoso con el toque dulce y fresco de la fresa.</span></div>
+        </div>
+      </div>
+
+      <!-- Producto 8 -->
+      <div class="product-card" data-category="vasos">
+        <div class="product-img-holder">
+          <img src="img/vaso-oreo.png" alt="Vaso de oreo">
+          <span class="price-tag">$1.50</span>
+        </div>
+
+        <div class="product-info">
+          <h3>Vaso de oreo</h3>
+          <p class="portion-text">Presentación en vaso</p>
+          <a href="https://wa.me/50376111636?text=Hola,%20deseo%20ordenar%20Vaso%20de%20oreo" class="btn-card" target="_blank">
+            Ordenar
+          </a>
+          <div class="product-hover-description" aria-hidden="true"><strong>Vaso de oreo</strong><span>Postre individual en vaso con capas cremosas y el irresistible sabor de Oreo.</span></div>
+        </div>
+      </div>
+
+      <!-- Producto 9 -->
+      <div class="product-card" data-category="vasos">
+        <div class="product-img-holder">
+          <img src="img/vaso-chocolate.png" alt="Vaso de Pastel de Chocolate">
+          <span class="price-tag">$1.50</span>
+        </div>
+
+        <div class="product-info">
+          <h3>Vaso de Pastel de Chocolate</h3>
+          <p class="portion-text">Presentación en vaso</p>
+          <a href="https://wa.me/50376111636?text=Hola,%20deseo%20ordenar%20Vaso%20de%20Pastel%20de%20Chocolate" class="btn-card" target="_blank">
+            Ordenar
+          </a>
+          <div class="product-hover-description" aria-hidden="true"><strong>Vaso de Pastel de Chocolate</strong><span>Capas de pastel de chocolate y crema servidas en una práctica presentación individual.</span></div>
+        </div>
+      </div>
+
+      <!-- Producto 10 -->
+      <div class="product-card" data-category="vasos">
+        <div class="product-img-holder">
+          <img src="img/vaso-flan.png" alt="Vaso de Flan">
+          <span class="price-tag">$1.50</span>
+        </div>
+
+        <div class="product-info">
+          <h3>Vaso de Flan</h3>
+          <p class="portion-text">Presentación en vaso</p>
+          <a href="https://wa.me/50376111636?text=Hola,%20deseo%20ordenar%20Vaso%20de%20Flan" class="btn-card" target="_blank">
+            Ordenar
+          </a>
+          <div class="product-hover-description" aria-hidden="true"><strong>Vaso de Flan</strong><span>Suave y cremoso flan presentado en vaso para disfrutarlo fácilmente.</span></div>
+        </div>
+      </div>
+
+      <!-- Producto 11 -->
+      <div class="product-card" data-category="vasos">
+        <div class="product-img-holder">
+          <img src="img/vaso-vainilla-fruta.png" alt="Vaso de pastel vainilla con fruta">
+          <span class="price-tag">$1.50</span>
+        </div>
+
+        <div class="product-info">
+          <h3>Vaso de pastel vainilla con fruta</h3>
+          <p class="portion-text">Presentación en vaso</p>
+          <a href="https://wa.me/50376111636?text=Hola,%20deseo%20ordenar%20Vaso%20de%20pastel%20vainilla%20con%20fruta" class="btn-card" target="_blank">
+            Ordenar
+          </a>
+          <div class="product-hover-description" aria-hidden="true"><strong>Vaso de pastel vainilla con fruta</strong><span>Pastel de vainilla suave combinado con crema y fruta en una presentación individual.</span></div>
+        </div>
+      </div>
+
+      <!-- Producto 12 -->
+      <div class="product-card" data-category="vasos">
+        <div class="product-img-holder">
+          <img src="img/vaso-flan-pan.png" alt="Vaso de Flan con fruta sobre capa de pan">
+          <span class="price-tag">$1.50</span>
+        </div>
+
+        <div class="product-info">
+          <h3>Vaso de Flan con fruta sobre capa de pan</h3>
+          <p class="portion-text">Presentación en vaso</p>
+          <a href="https://wa.me/50376111636?text=Hola,%20deseo%20ordenar%20Vaso%20de%20Flan%20con%20fruta" class="btn-card" target="_blank">
+            Ordenar
+          </a>
+          <div class="product-hover-description" aria-hidden="true"><strong>Vaso de Flan con fruta</strong><span>Próximamente tendremos más información sobre este producto.</span></div>
+        </div>
+      </div>
+
+      <!-- Producto 13 -->
+      <div class="product-card" data-category="porciones">
+        <div class="product-img-holder">
+          <img src="img/pastel-zanahoria.png" alt="Pastel de zanahoria">
+          <span class="price-tag">$2.25</span>
+        </div>
+
+        <div class="product-info">
+          <h3>Pastel de zanahoria</h3>
+          <p class="portion-text">Porción individual</p>
+          <a href="https://wa.me/50376111636?text=Hola,%20deseo%20ordenar%20Pastel%20de%20zanahoria" class="btn-card" target="_blank">
+            Ordenar
+          </a>
+          <div class="product-hover-description" aria-hidden="true"><strong>Pastel de zanahoria</strong><span>Pastel de zanahoria suave y especiado, ideal para disfrutar como postre individual.</span></div>
+        </div>
+      </div>
+
+      <!-- Producto 14 -->
+      <div class="product-card" data-category="vasos">
+        <div class="product-img-holder">
+          <img src="img/vaso-flan-frutas-pan.png" alt="Vaso de flan sobre capa de pan con frutas">
+          <span class="price-tag">$1.50</span>
+        </div>
+
+        <div class="product-info">
+          <h3>Vaso de flan sobre capa de pan con frutas</h3>
+          <p class="portion-text">Presentación en vaso</p>
+          <a href="https://wa.me/50376111636?text=Hola,%20deseo%20ordenar%20Vaso%20de%20flan%20con%20frutas" class="btn-card" target="_blank">
+            Ordenar
+          </a>
+          <div class="product-hover-description" aria-hidden="true"><strong>Vaso de flan con frutas</strong><span>Próximamente tendremos más información sobre este producto.</span></div>
+        </div>
+      </div>
+
+      <!-- Producto 15 -->
+      <div class="product-card" data-category="porciones">
+        <div class="product-img-holder">
+          <img src="img/tres-leches-chocolate.png" alt="Tres leches de chocolate">
+          <span class="price-tag">$1.75</span>
+        </div>
+
+        <div class="product-info">
+          <h3>Tres leches de chocolate</h3>
+          <p class="portion-text">Porción individual</p>
+          <a href="https://wa.me/50376111636?text=Hola,%20deseo%20ordenar%20Tres%20leches%20de%20chocolate" class="btn-card" target="_blank">
+            Ordenar
+          </a>
+          <div class="product-hover-description" aria-hidden="true"><strong>Tres leches de chocolate</strong><span>Pastel de chocolate bañado en una mezcla de tres leches para una textura húmeda y cremosa.</span></div>
+        </div>
+      </div>
+
+      <!-- Producto 16 -->
+      <div class="product-card" data-category="porciones">
+        <div class="product-img-holder">
+          <img src="img/tres-leches-vainilla.png" alt="Tres leches de vainilla">
+          <span class="price-tag">$1.75</span>
+        </div>
+
+        <div class="product-info">
+          <h3>Tres leches de vainilla</h3>
+          <p class="portion-text">Porción individual</p>
+          <a href="https://wa.me/50376111636?text=Hola,%20deseo%20ordenar%20Tres%20leches%20de%20vainilla" class="btn-card" target="_blank">
+            Ordenar
+          </a>
+          <div class="product-hover-description" aria-hidden="true"><strong>Tres leches de vainilla</strong><span>Clásico pastel de vainilla bañado en tres leches, suave, húmedo y cremoso.</span></div>
+        </div>
+      </div>
+
+      <!-- Producto 17 -->
+      <div class="product-card" data-category="porciones">
+        <div class="product-img-holder">
+          <img src="img/pie-limon.png" alt="Pie de limón">
+          <span class="price-tag">$2.25</span>
+        </div>
+
+        <div class="product-info">
+          <h3>Pie de limón</h3>
+          <p class="portion-text">Porción individual</p>
+          <a href="https://wa.me/50376111636?text=Hola,%20deseo%20ordenar%20Pie%20de%20limón" class="btn-card" target="_blank">
+            Ordenar
+          </a>
+          <div class="product-hover-description" aria-hidden="true"><strong>Pie de limón</strong><span>Base crujiente con un relleno cremoso de limón, equilibrando dulzura y un toque cítrico.</span></div>
+        </div>
+      </div>
+
+      <!-- Producto 18 -->
+      <div class="product-card" data-category="porciones">
+        <div class="product-img-holder">
+          <img src="img/tartaleta-limon.png" alt="Tartaleta de limón">
+          <span class="price-tag">$1.25</span>
+        </div>
+
+        <div class="product-info">
+          <h3>Tartaleta de limón</h3>
+          <p class="portion-text">Unidad</p>
+          <a href="https://wa.me/50376111636?text=Hola,%20deseo%20ordenar%20Tartaleta%20de%20limón" class="btn-card" target="_blank">
+            Ordenar
+          </a>
+          <div class="product-hover-description" aria-hidden="true"><strong>Tartaleta de limón</strong><span>Pequeña tartaleta con relleno de limón, ideal para disfrutar en cualquier momento.</span></div>
+        </div>
+      </div>
+
+      <!-- Producto 19 -->
+      <div class="product-card" data-category="porciones">
+        <div class="product-img-holder">
+          <img src="img/tartaleta-frutas.png" alt="Tartaleta de frutas">
+          <span class="price-tag">$1.25</span>
+        </div>
+
+        <div class="product-info">
+          <h3>Tartaleta de frutas</h3>
+          <p class="portion-text">Unidad</p>
+          <a href="https://wa.me/50376111636?text=Hola,%20deseo%20ordenar%20Tartaleta%20de%20frutas" class="btn-card" target="_blank">
+            Ordenar
+          </a>
+          <div class="product-hover-description" aria-hidden="true"><strong>Tartaleta de frutas</strong><span>Tartaleta individual con un delicioso relleno y una fresca combinación de frutas.</span></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Sección Pastelería -->
+  <section id="pasteleria" class="placeholder-section bg-alt">
+    <div class="container">
+      <h2>Catálogo de Pastelería</h2>
+      <p>
+        Próximamente publicaremos nuestro catálogo completo de pasteles para toda ocasión.
+        ¡Cotiza tus diseños personalizados directamente con nosotros!
+      </p>
+
+      <a href="https://wa.me/50376111636?text=Hola,%20quisiera%20cotizar%20un%20pastel%20personalizado"
+         class="btn btn-secondary" target="_blank">
+        Cotizar Pastel Personalizado
+      </a>
+
+      <!-- Cuadrícula de Pasteles -->
+      <div class="products-grid" id="pasteleria-grid">
+
+        <!-- Pastel 1: reemplazar img e info por el producto real -->
+        <div class="product-card">
+          <div class="product-img-holder">
+            <img src="img/pastel-1.png" alt="Pastel 1">
+           
+          </div>
+
+          <div class="product-info">
+            <h3>Pastel tradicional</h3>
+            <p class="portion-text">Tamaño / porciones</p>
+            <a href="https://wa.me/50376111636?text=Hola,%20deseo%20ordenar%20un%20pastel" class="btn-card" target="_blank">
+              Ordenar
+            </a>
+            <div class="product-hover-description" aria-hidden="true"><strong>Pastel tradicional</strong><span>Pastel festivo de vainilla con relleno dulce, cobertura blanca, rosetas de crema rosada y una imagen comestible personalizada en la parte superior.</span></div>
+          </div>
+        </div>
+
+        <!-- Pastel 2: reemplazar img e info por el producto real -->
+        <div class="product-card">
+          <div class="product-img-holder">
+            <img src="img/pastel-2.png" alt="Pastel 2">
+            <span class="price-tag">$0.00</span>
+          </div>
+
+          <div class="product-info">
+            <h3>Pastel tradicional de fresa</h3>
+            <p class="portion-text">Tamaño / porciones</p>
+            <a href="https://wa.me/50376111636?text=Hola,%20deseo%20ordenar%20un%20pastel" class="btn-card" target="_blank">
+              Ordenar
+            </a>
+            <div class="product-hover-description" aria-hidden="true"><strong>Pastel tradicional de fresa</strong><span>Pastel elegante de vainilla con relleno de crema, cobertura blanca, fresas frescas y un mensaje personalizado en la parte superior.</span></div>
+          </div>
+        </div>
+
+        <!-- Pastel 3: reemplazar img e info por el producto real -->
+        <div class="product-card">
+          <div class="product-img-holder">
+            <img src="img/pastel-3.png" alt="Pastel 3">
+            <span class="price-tag">$0.00</span>
+          </div>
+
+          <div class="product-info">
+            <h3>Pastel tradicional de cereza </h3>
+            <p class="portion-text">Tamaño / porciones</p>
+            <a href="https://wa.me/50376111636?text=Hola,%20deseo%20ordenar%20un%20pastel" class="btn-card" target="_blank">
+              Ordenar
+            </a>
+            <div class="product-hover-description" aria-hidden="true"><strong>Pastel tradicional de cereza </strong><span>Pastel de vainilla con relleno y cobertura de crema blanca, decorado con cerezas rojas, mensaje personalizado y un borde de frutos secos en la base.</span></div>
+          </div>
+        </div>
+
+        <!-- Pastel 4: reemplazar img e info por el producto real -->
+        <div class="product-card">
+          <div class="product-img-holder">
+            <img src="img/pastel-4.png" alt="Pastel 4">
+            <span class="price-tag">$0.00</span>
+          </div>
+
+          <div class="product-info">
+            <h3>Pastel tradicional de chocolate</h3>
+            <p class="portion-text">Tamaño / porciones</p>
+            <a href="https://wa.me/50376111636?text=Hola,%20deseo%20ordenar%20un%20pastel" class="btn-card" target="_blank">
+              Ordenar
+            </a>
+            <div class="product-hover-description" aria-hidden="true"><strong>Pastel tradicional de chocolate</strong><span>Pastel triple chocolate decorado con trozos, virutas y figuras de chocolate, un mensaje personalizado en la parte superior y detalles de chocolate alrededor.</span></div>
+          </div>
+        </div>
+
+        <!-- Pastel 5: reemplazar img e info por el producto real -->
+        <div class="product-card">
+          <div class="product-img-holder">
+            <img src="img/pastel-5.png" alt="Pastel 5">
+            <span class="price-tag">$0.00</span>
+          </div>
+
+          <div class="product-info">
+            <h3>Pastel tradicional rosetones</h3>
+            <p class="portion-text">Tamaño / porciones</p>
+            <a href="https://wa.me/50376111636?text=Hola,%20deseo%20ordenar%20un%20pastel" class="btn-card" target="_blank">
+              Ordenar
+            </a>
+            <div class="product-hover-description" aria-hidden="true"><strong>Pastel tradicional rosetones</strong><span>Pastel de vainilla con crema blanca, decorado con rosetones, cerezas y mensaje personalizado, más un borde inferior de frutos secos.</span></div>
+          </div>
+        </div>
+
+        <!-- Pastel 6: reemplazar img e info por el producto real -->
+        <div class="product-card">
+          <div class="product-img-holder">
+            <img src="img/pastel-6.png" alt="Pastel 6">
+            <span class="price-tag">$0.00</span>
+          </div>
+
+          <div class="product-info">
+            <h3>Pastel infantil</h3>
+            <p class="portion-text">Tamaño / porciones</p>
+            <a href="https://wa.me/50376111636?text=Hola,%20deseo%20ordenar%20un%20pastel" class="btn-card" target="_blank">
+              Ordenar
+            </a>
+            <div class="product-hover-description" aria-hidden="true"><strong>Pastel infantil</strong><span>Pastel de vainilla con crema blanca, decorado con crema de colores para dar forma al rostro y orejas de un conejito.</span></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección Eventos -->
+  <section id="eventos" class="placeholder-section container">
+    <div class="container">
+      <h2>Catálogo de Boquitas y Eventos</h2>
+      <p>
+        Estamos preparando nuestro menú especial de boquitas y banquetes para hacer de tus
+        eventos momentos inolvidables.
+      </p>
+
+      <div class="eventos-cta-group">
+        <a href="https://wa.me/50376111636?text=Hola,%20deseo%20información%20sobre%20boquitas%20para%20eventos"
+           class="btn btn-secondary" target="_blank">
+          Consultar por Eventos
+        </a>
+
+        <button type="button" id="open-pdf-catalog" class="btn btn-secondary">
+        Ver Catálogo
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Visor de Catálogo PDF (efecto libro) -->
+  <div id="pdf-viewer-modal" class="pdf-modal" aria-hidden="true">
+    <div class="pdf-modal-content">
+
+      <button type="button" id="pdf-modal-close" class="pdf-modal-close" aria-label="Cerrar catálogo">&times;</button>
+
+      <div class="pdf-book-wrapper">
+
+        <div id="pdf-loading" class="pdf-loading">Cargando catálogo...</div>
+
+        <div id="pdf-book" class="pdf-book">
+          <div id="pdf-page-back" class="pdf-page pdf-page-back">
+            <canvas id="pdf-canvas-back"></canvas>
+          </div>
+          <div id="pdf-page-front" class="pdf-page pdf-page-front">
+            <canvas id="pdf-canvas-front"></canvas>
+          </div>
+        </div>
+
+        <button type="button" id="pdf-prev-btn" class="pdf-arrow-btn pdf-arrow-prev" aria-label="Página anterior">&#10094;</button>
+        <button type="button" id="pdf-next-btn" class="pdf-arrow-btn pdf-arrow-next" aria-label="Página siguiente">&#10095;</button>
+      </div>
+
+      <div class="pdf-book-controls">
+        <span id="pdf-page-indicator">Página 1 de 1</span>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Sección Nosotros -->
+  <section id="nosotros" class="about-section bg-alt">
+    <div class="container">
+
+      <div class="section-title-wrap">
+        <h2>Sobre Nosotros</h2>
+        <p style="color: #ffffff;">Conoce la historia y el corazón detrás de Rosy Pasteles.</p>
+      </div>
+
+      <div class="about-history">
+        <h3>Nuestra Historia</h3>
+
+        <p>
+          <strong>Todo comenzó con un sueño que se convirtió en pasión.</strong>
+          Rosy Pasteles nació del deseo de aprender y crear momentos especiales a través
+          de la repostería. Lo que comenzó en casa, entre recetas, práctica y dedicación,
+          creció gracias a la confianza y recomendación de nuestros clientes.
+        </p>
+
+        <p>
+          Hoy elaboramos pasteles, brownies, postres y productos personalizados,
+          poniendo en cada creación dedicación, creatividad y amor por los detalles.
+        </p>
+
+        <p class="highlight-text">
+          ¡Endulza tus momentos especiales con Rosy Pasteles.
+          Haz tu pedido y sé parte de nuestra historia!
+        </p>
+      </div>
+
+
+      <div class="about-photo-section">
+        <div class="photo-placeholder">
+        <img src="img/misionvision.jpg" alt="Misión y Visión de Rosy Pasteles">
+        </div>
+      </div>
+      <!-- Espacio para fotografía -->
+      <div class="about-photo-section values-photo-section">
+        <div class="photo-placeholder">
+        <img src="img/valores.png" alt="Misión y Visión de Rosy Pasteles">
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+<!-- Pie de Página -->
+  <footer class="site-footer">
+
+    <div class="container footer-content">
+
+      <div class="footer-brand">
+       
+        <p class="footer-motto">“El sabor de lo especial.”</p>
+      </div>
+
+      <div class="footer-info">
+        <h4>Sucursal Soyapango</h4>
+        <p>📍 Calle principal Venecia, Soyapango</p>
+        <p>⏰ Martes a Domingo: 10:30 am - 7:00 pm</p>
+        <p>📞 +503 7611 1636</p>
+      </div>
+
+      <div class="footer-links">
+        <h4>Navegación</h4>
+
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#reposteria">Repostería</a></li>
+          <li><a href="#pasteleria">Pastelería</a></li>
+          <li><a href="#eventos">Eventos</a></li>
+          <li><a href="#nosotros">Nosotros</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 Rosy Pasteles. Todos los derechos reservados.</p>
+    </div>
+
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+  <script src="script.js"></script>
+
+</body>
+</html>
